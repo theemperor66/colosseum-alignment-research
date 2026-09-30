@@ -1,0 +1,26 @@
+name: CPU verification
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install hashed dependencies
+        run: python -m pip install --require-hashes -r requirements-lock.txt
+      - name: Install research package
+        run: python -m pip install --no-deps -e .
+      - name: Verify frozen sources and CPU software behavior
+        run: make verify
