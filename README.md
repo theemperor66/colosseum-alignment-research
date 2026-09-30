@@ -25,7 +25,7 @@ These are findings within the selected simulated design. The primary physical co
 ## Architecture
 
 ```mermaid
-flowchart LR
+flowchart TB
     P["Frozen scenario and protocol"] --> S["Colosseum 3D world"]
     S --> O["Delivered RGB, depth and state"]
     O --> C["Fixed controller"]
