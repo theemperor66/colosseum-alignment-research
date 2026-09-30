@@ -1,0 +1,16 @@
+Colosseum Alignment Research
+Copyright 2026 Zaid Marzguioui
+
+The project-authored code is provided under the Apache License, Version 2.0,
+consistent with the development package's existing license declaration.
+
+This repository is an independently authored research package around the
+Colosseum simulator. It does not redistribute Colosseum, Unreal Engine,
+third-party simulator binaries, maps, textures, or other simulator assets.
+Their names identify external software and do not imply endorsement.
+Dependencies retain their respective licenses. The code license grants no
+rights to excluded data, manuscript materials, or third-party assets.
+
+OpenAI Codex and language-model agents assisted implementation, analysis,
+verification, and documentation. The evaluated flight policy did not query
+a language model. Computational checks are not external human peer review.

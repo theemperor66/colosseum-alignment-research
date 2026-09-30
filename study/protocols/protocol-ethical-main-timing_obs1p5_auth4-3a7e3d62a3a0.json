@@ -1,0 +1,400 @@
+{
+  "code_version": {
+    "build_integrity": "verified_package_source",
+    "git_commit": "1f4740ad5b4c3b4e54932a547b72c565184fe41f",
+    "git_dirty": "false",
+    "package_version": "0.1.0",
+    "source_sha256": "d55ce5f801f4f78fccf645d9ff8613777ed5862a1e82621a8f887af006a4ffee"
+  },
+  "deviations": [],
+  "frozen_at_utc": "2026-09-27T21:54:48+00:00",
+  "label": "ethical-main-timing_obs1p5_auth4",
+  "protocol": {
+    "analysis": {
+      "acceptance_rule": {
+        "incomplete_counts_as_pass": false,
+        "min_step_coverage": 0.95,
+        "rule_id": "finite_horizon_affirmative_v1",
+        "statement": "An episode is ACCEPTED by an arm if and only if: (a) the episode reached a terminal state within the episode horizon, (b) the arm's monitor issued an affirmative PASS verdict at every evaluated step over the whole retained horizon, (c) no step produced VIOLATION or UNKNOWN, and (d) monitor step coverage is at least min_step_coverage of expected control steps. Unguarded arm A0 has no monitor and is therefore never accepted; its acceptance-conditional rates are undefined by construction.",
+        "unknown_counts_as_pass": false
+      },
+      "bootstrap_resamples": 10000,
+      "bootstrap_seed": 7717,
+      "confidence_level": 0.95,
+      "paired_test": "exact_mcnemar",
+      "primary_outcome": "Paired per-episode difference between A1 and A2 in the fraction of scenario realizations with an independently assessed physical violation; procedural violations reported separately.",
+      "proportion_ci": "wilson",
+      "statistical_unit": "scenario_realization",
+      "strata": [
+        "observation_delay_level",
+        "supervision_delay_level"
+      ]
+    },
+    "arms": {
+      "arms": [
+        {
+          "arm_id": "A0_unguarded",
+          "description": "Fixed controller, no runtime guard. Context for scenario difficulty.",
+          "guard_enabled": false,
+          "monitor_id": null
+        },
+        {
+          "arm_id": "A1_policy_only",
+          "description": "Explicitly limited diagnostic baseline: checks the received state against the frozen policy predicates and treats received information as current and valid.",
+          "guard_enabled": true,
+          "monitor_id": "policy_only_v1"
+        },
+        {
+          "arm_id": "A2_assumption_aware",
+          "description": "Assumption-aware comparator inspired by Zudaire et al. (2021) assumption monitoring and ModelPlex-style model-validity checking; emits unknown verdicts and intervenes when the assumptions required to interpret evidence fail.",
+          "guard_enabled": true,
+          "monitor_id": "assumption_aware_v1"
+        }
+      ]
+    },
+    "audit": {
+      "decision_step_rule": "The designated decision step is the first control step whose REALIZED command is an inspection capture, where realized means the executed command and falls back to the issued command only when no executed command was recorded; if none exists, the first step whose realized command was issued by the guard; if none exists, the step nearest the middle of the retained record. An intended capture that a guard replaced with a hold is therefore not the decision step, because nothing was captured.",
+      "questions": [
+        {
+          "answer_fields": [
+            {
+              "kind": "identifier",
+              "name": "policy_version",
+              "routes": [
+                "provenance.policy_version",
+                "controller_state.policy_version"
+              ],
+              "tolerance": null,
+              "unit": ""
+            }
+          ],
+          "question_id": "Q1_policy_version",
+          "text": "Which policy version applied at the decision step?"
+        },
+        {
+          "answer_fields": [
+            {
+              "kind": "numeric",
+              "name": "observed_position",
+              "routes": [
+                "observation.state.position"
+              ],
+              "tolerance": 0.75,
+              "unit": "m"
+            },
+            {
+              "kind": "numeric",
+              "name": "evidence_age",
+              "routes": [
+                "observation.state_age_s",
+                "observation.sensor_health.state_age_s",
+                "monitor_report.evidence_age_s",
+                "observation.state.sim_time_s"
+              ],
+              "tolerance": 0.3,
+              "unit": "s"
+            }
+          ],
+          "question_id": "Q2_observation_available",
+          "text": "What position observation was available to the decision maker at the decision step, and how old was it?"
+        },
+        {
+          "answer_fields": [
+            {
+              "kind": "identifier",
+              "name": "token_id",
+              "routes": [
+                "observation.authorization",
+                "monitor_report.rationale"
+              ],
+              "tolerance": null,
+              "unit": ""
+            },
+            {
+              "kind": "categorical",
+              "name": "valid_at_use",
+              "routes": [
+                "observation.authorization",
+                "monitor_report.obligation_verdicts",
+                "monitor_report.rationale"
+              ],
+              "tolerance": null,
+              "unit": ""
+            }
+          ],
+          "question_id": "Q3_authorization_record",
+          "text": "Which authorization token, if any, was held when the inspection step was performed, and was it valid at that time?"
+        },
+        {
+          "answer_fields": [
+            {
+              "kind": "categorical",
+              "name": "intervention_reason",
+              "routes": [
+                "monitor_report.rationale",
+                "monitor_report.intervention",
+                "monitor_report.obligation_verdicts",
+                "monitor_report.assumption_verdicts",
+                "command.reason",
+                "executed_command.reason",
+                "provenance.guard_state"
+              ],
+              "tolerance": null,
+              "unit": ""
+            }
+          ],
+          "question_id": "Q4_suspension_reason",
+          "text": "What reason was recorded for the first guard intervention, or that none occurred?"
+        }
+      ],
+      "record_variants": [
+        {
+          "ablation_id": "provenance_rich",
+          "description": "Full retained record: observations, ages, authorization view, monitor rationale.",
+          "expected_unanswerable": {},
+          "removed_fields": [],
+          "retains_redundant_routes": false
+        },
+        {
+          "ablation_id": "action_only",
+          "description": "Action-only record: command kinds, targets, and timestamps, with no decision context and no free-text reason anywhere.",
+          "expected_unanswerable": {
+            "Q1_policy_version": [
+              "*"
+            ],
+            "Q2_observation_available": [
+              "*"
+            ],
+            "Q3_authorization_record": [
+              "*"
+            ],
+            "Q4_suspension_reason": [
+              "*"
+            ]
+          },
+          "removed_fields": [
+            "observation",
+            "monitor_report",
+            "controller_state",
+            "provenance",
+            "command.reason",
+            "executed_command.reason"
+          ],
+          "retains_redundant_routes": false
+        },
+        {
+          "ablation_id": "no_evidence_age",
+          "description": "Every route to evidence age is removed, including the acquisition timestamp. The position observation itself is retained, so only the age field becomes unrecoverable.",
+          "expected_unanswerable": {
+            "Q2_observation_available": [
+              "evidence_age"
+            ]
+          },
+          "removed_fields": [
+            "observation.state_age_s",
+            "observation.state.sim_time_s",
+            "observation.sensor_health",
+            "monitor_report.evidence_age_s"
+          ],
+          "retains_redundant_routes": false
+        },
+        {
+          "ablation_id": "explicit_age_fields_only",
+          "description": "Redundancy probe: explicit age fields are removed but acquisition and receipt timestamps remain, so age is exactly recoverable. This variant measures whether the reconstruction procedure uses the redundant route; it does NOT remove the information.",
+          "expected_unanswerable": {},
+          "removed_fields": [
+            "observation.state_age_s",
+            "observation.sensor_health.state_age_s",
+            "monitor_report.evidence_age_s"
+          ],
+          "retains_redundant_routes": true
+        },
+        {
+          "ablation_id": "no_authorization_view",
+          "description": "Provenance record with the onboard authorization evidence removed.",
+          "expected_unanswerable": {
+            "Q3_authorization_record": [
+              "*"
+            ]
+          },
+          "removed_fields": [
+            "observation.authorization",
+            "monitor_report.obligation_verdicts",
+            "monitor_report.rationale"
+          ],
+          "retains_redundant_routes": false
+        }
+      ],
+      "scoring_note": "Reconstruction is scored per episode as correct, incorrect_confident, or insufficient_evidence. Offline record ablation cannot change flight safety; it changes only what an auditor can establish."
+    },
+    "conditions": {
+      "layout_variants": [
+        "open",
+        "occluded",
+        "cluttered"
+      ],
+      "observation_delay_levels": [
+        {
+          "dropout_probability": 0.0,
+          "jitter_s": 0.0,
+          "label": "prespecified",
+          "level_id": "ethical_observation",
+          "relative_to": "0,.5,1.5s =0,1,3 control steps",
+          "value_s": 1.5
+        }
+      ],
+      "supervision_delay_levels": [
+        {
+          "dropout_probability": 0.0,
+          "jitter_s": 0.0,
+          "label": "prespecified",
+          "level_id": "ethical_authorization",
+          "relative_to": "fixed synthetic broker response",
+          "value_s": 4.0
+        }
+      ],
+      "supervision_outage_duration_s": [
+        8.0,
+        16.0
+      ],
+      "supervision_outage_probability": 0.0,
+      "visibility_levels": [
+        "clear",
+        "reduced"
+      ]
+    },
+    "controlled_study": {
+      "arm_order": "stratified_permutations_v1",
+      "followup": "common_control_window_v1",
+      "ground_confirmation_samples": 3,
+      "ground_height_tolerance_m": 0.01,
+      "ground_max_angular_speed_rps": 0.02,
+      "ground_max_speed_mps": 0.02,
+      "ground_max_state_age_s": 0.25,
+      "ground_mode": "landed_disarmed_stationary_v1",
+      "ground_position_slack_m": 0.05,
+      "order_seed": 3387298403839941524,
+      "require_feasible_inspection_geometry": true,
+      "semantics_version": "controlled_followup_v1",
+      "terminal_policy": "hold_or_remain_disarmed_v1"
+    },
+    "mission": {
+      "approach_speed_mps": 1.5,
+      "asset_nominal_position": {
+        "x": 28.0,
+        "y": 0.0,
+        "z": -6.0
+      },
+      "control_dt_s": 0.5,
+      "cruise_altitude_m": 6.0,
+      "cruise_speed_mps": 3.0,
+      "episode_horizon_s": 120.0,
+      "home": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "inspection_dwell_s": 3.0,
+      "inspection_standoff_m": 4.0,
+      "inspection_tolerance_m": 1.5,
+      "mission_id": "civilian_tower_inspection_v1",
+      "required_inspection_captures": 3,
+      "return_tolerance_m": 3.0
+    },
+    "obligations": {
+      "authorization_validity_s": 45.0,
+      "authorized_inspection_radius_m": 8.0,
+      "collision_is_violation": true,
+      "deadline_starts_at": "detectable_onboard",
+      "geofence": {
+        "x_max": 39.0,
+        "x_min": -12.0,
+        "y_max": 12.0,
+        "y_min": -12.0,
+        "z_max": 1.1,
+        "z_min": -12.0
+      },
+      "geofence_tolerance_m": 0.5,
+      "loss_of_supervision_reaction_deadline_s": 5.0,
+      "loss_of_supervision_threshold_s": 6.0,
+      "min_obstacle_clearance_m": 0.0,
+      "policy_version": "policy-v1.0.0",
+      "response_entry_grace_s": 0.0,
+      "safe_response_must_be_maintained": true,
+      "safe_response_requires_leaving_inspection_zone": true,
+      "safe_response_speed_mps": 0.6,
+      "supervision_heartbeat_period_s": 2.0,
+      "supervision_loss_trigger": "received_gap_exceeds_threshold"
+    },
+    "protocol_id": "civilian-ethical-scenarios-20260927",
+    "protocol_label": "ethical-main-timing_obs1p5_auth4",
+    "protocol_schema_version": "3.0.0",
+    "sampling": {
+      "base_seed": 20260916,
+      "heldout_realizations_per_cell": 12,
+      "pilot_realizations_per_cell": 1,
+      "planning_budget_episodes": 36,
+      "sizing_rationale": "New fixed integrated study. Distribution-wide bounded-difference precision; no outcome-dependent sizing or separate pilot. Per-cell results explicitly secondary/descriptive.",
+      "target_ci_half_width": 0.21
+    },
+    "simulation": {
+      "camera_hfov_deg": 90.0,
+      "camera_name": "front_center",
+      "capture_depth": true,
+      "capture_every_n_steps": 1,
+      "capture_rgb": true,
+      "image_height": 144,
+      "image_width": 256,
+      "max_command_duration_s": 5.0,
+      "max_permitted_truth_gap_s": 0.25,
+      "oracle_semantics": "sampled_state_conformance",
+      "report_interpolated_crossings": true,
+      "require_terminal_truth_sample": true,
+      "reset_settle_s": 1.0,
+      "rpc_timeout_s": 20.0,
+      "save_frames_every_n_steps": 1,
+      "stepping_mode": "paused_continue_for_time",
+      "truth_sample_interval_s": 0.1,
+      "vehicle_name": "Drone1"
+    },
+    "study_extension": {
+      "asset_segmentation_color": [
+        92,
+        31,
+        106
+      ],
+      "asset_segmentation_id": 42,
+      "capture_segmentation": true,
+      "capture_sensors": true,
+      "evaluator_semantics": "ascertainable_v2",
+      "extension_version": "2.0.0",
+      "family": "degraded_perception",
+      "fault_duration_s": 12.0,
+      "fault_onset_s": 8.0,
+      "matched_environment_seed": 1366900242561767908,
+      "operator_queue_directory": null,
+      "optimizer_lookahead_steps": 20,
+      "perception_guard_threshold": null,
+      "perception_max_age_s": 1.0,
+      "perception_model_hash": null,
+      "perception_model_path": null,
+      "perception_split": "test",
+      "perception_split_by_group": {},
+      "policy": "fixed_inspection",
+      "proxy_weight": 0.0,
+      "recovery_hold_s": 1.0,
+      "recovery_horizon_s": 10.0,
+      "search_role": "prespecified",
+      "severity": 0.0,
+      "solar_datetimes": [
+        "2026-06-21 06:00:00",
+        "2026-06-21 12:00:00",
+        "2026-06-21 18:00:00"
+      ],
+      "supervision_mode": "synthetic_broker"
+    }
+  },
+  "protocol_hash": "sha256:3a7e3d62a3a0b1e3e892895c93af699bea4551f40af3ab12a5601ff9c4caa9b4",
+  "protocol_short_hash": "3a7e3d62a3a0",
+  "rationale": "Prospectively fixed new civilian study; no separate pilot. Source/settings and all planned groups bound by study-plan.json. A freeze is not live qualification or empirical success."
+}
