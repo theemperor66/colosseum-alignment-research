@@ -2,7 +2,7 @@
 
 **From embodied behaviour to evidence for ethical and safety arguments.**
 
-Research software accompanying *Simulation-Based Alignment Research for Embodied Agents: A Colosseum Testbed for Autonomous UAVs in Civilian Defence*, by Zaid Marzguioui. The manuscript develops a general simulation-based evaluation approach and examines it through a completed civilian UAV inspection study.
+Research software accompanying *Simulation-Based Alignment Research for Embodied Agents: A Colosseum Testbed for Autonomous UAVs in Civilian Defence*, by Zaid Marzguioui, Universität Regensburg. The manuscript develops a general simulation-based evaluation approach and examines it through a completed civilian UAV inspection study.
 
 The central question is what a system's observed behaviour warrants us in claiming about it. This implementation separates the agent's observations, the guard's judgement, independently measured consequences, and what a later auditor can reconstruct. The separation makes disagreements inspectable: a monitor can endorse an unsafe episode, restraint can remove useful service, and a brief recovery can precede a later violation.
 
