@@ -1,0 +1,84 @@
+{
+  "source_sha256": "6f60d5f10a455091d603eafbd0d003beaf489303cbf7d1ecdfeb1adbd59ce786",
+  "selection": "All 7 A2 physical-violation episodes in the 792 snapshot; exhaustive retrospective selection.",
+  "examples": [
+    {
+      "episode_id": "heldout-b367c734b5a3-simulated_manipulation-r002__A2_assumption_aware",
+      "realization": "r002",
+      "fault_started_s": 8.103172864,
+      "fault_ended_s": 20.106428928,
+      "sampled_hold_start_s": 20.106428928,
+      "sampled_hold_end_s": 21.106428928,
+      "assessment_deadline_s": 30.106428928,
+      "first_nonexempt_contact_s": 48.574036224,
+      "contact_after_assessment_deadline_s": 18.467607295999997
+    },
+    {
+      "episode_id": "heldout-b367c734b5a3-simulated_manipulation-r004__A2_assumption_aware",
+      "realization": "r004",
+      "fault_started_s": 8.106172928,
+      "fault_ended_s": 20.11542912,
+      "sampled_hold_start_s": 20.11542912,
+      "sampled_hold_end_s": 21.11542912,
+      "assessment_deadline_s": 30.11542912,
+      "first_nonexempt_contact_s": 47.908022016,
+      "contact_after_assessment_deadline_s": 17.792592895999995
+    },
+    {
+      "episode_id": "heldout-b367c734b5a3-simulated_manipulation-r005__A2_assumption_aware",
+      "realization": "r005",
+      "fault_started_s": 8.109172992,
+      "fault_ended_s": 20.133429504,
+      "sampled_hold_start_s": 20.133429504,
+      "sampled_hold_end_s": 21.133429504,
+      "assessment_deadline_s": 30.133429504,
+      "first_nonexempt_contact_s": 50.317073408,
+      "contact_after_assessment_deadline_s": 20.183643904
+    },
+    {
+      "episode_id": "heldout-b367c734b5a3-simulated_manipulation-r007__A2_assumption_aware",
+      "realization": "r007",
+      "fault_started_s": 8.103172864,
+      "fault_ended_s": 20.112429056,
+      "sampled_hold_start_s": 20.112429056,
+      "sampled_hold_end_s": 21.112429056,
+      "assessment_deadline_s": 30.112429056,
+      "first_nonexempt_contact_s": 48.955044352,
+      "contact_after_assessment_deadline_s": 18.842615296
+    },
+    {
+      "episode_id": "heldout-b367c734b5a3-simulated_manipulation-r008__A2_assumption_aware",
+      "realization": "r008",
+      "fault_started_s": 8.097172736,
+      "fault_ended_s": 20.103428864,
+      "sampled_hold_start_s": 20.103428864,
+      "sampled_hold_end_s": 21.103428864,
+      "assessment_deadline_s": 30.103428864,
+      "first_nonexempt_contact_s": 48.979044864,
+      "contact_after_assessment_deadline_s": 18.875616
+    },
+    {
+      "episode_id": "heldout-b367c734b5a3-simulated_manipulation-r010__A2_assumption_aware",
+      "realization": "r010",
+      "fault_started_s": 8.112173056,
+      "fault_ended_s": 20.127429376,
+      "sampled_hold_start_s": 20.127429376,
+      "sampled_hold_end_s": 21.127429376,
+      "assessment_deadline_s": 30.127429376,
+      "first_nonexempt_contact_s": 48.69103872,
+      "contact_after_assessment_deadline_s": 18.563609344000003
+    },
+    {
+      "episode_id": "heldout-b367c734b5a3-simulated_manipulation-r011__A2_assumption_aware",
+      "realization": "r011",
+      "fault_started_s": 8.094172672,
+      "fault_ended_s": 20.097428736,
+      "sampled_hold_start_s": 20.097428736,
+      "sampled_hold_end_s": 21.097428736,
+      "assessment_deadline_s": 30.097428736,
+      "first_nonexempt_contact_s": 49.273051136,
+      "contact_after_assessment_deadline_s": 19.175622399999998
+    }
+  ],
+  "all_contacts_after_assessment_deadline": true
+}

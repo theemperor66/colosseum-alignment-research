@@ -1,0 +1,149 @@
+{
+  "format": "colosseum_public_data_release_v1",
+  "release": "v1.1.0",
+  "date": "2026-09-30",
+  "repository": "https://github.com/theemperor66/colosseum-alignment-research",
+  "selected_episodes": 792,
+  "preserved_original_complete": 757,
+  "selected_first_complete_followups": 35,
+  "retained_attempts": 826,
+  "primary_matched_groups": 180,
+  "distinct_environments": 216,
+  "compact_archive_sha256": "8fb48df5102ba4b06c1adcae83c7434152bdadff31009bc9f0d4d066d44ad894",
+  "files": {
+    "data/compact/evidence.zip": {
+      "bytes": 952403,
+      "sha256": "8fb48df5102ba4b06c1adcae83c7434152bdadff31009bc9f0d4d066d44ad894"
+    },
+    "data/derived/completion-accounting.json": {
+      "bytes": 46487,
+      "sha256": "ee09026050cc9e44307f610572215c585f6b63be003da4ade82554a1452aa15b"
+    },
+    "data/derived/completion-plan.json": {
+      "bytes": 37943,
+      "sha256": "a3e9652455e04848e7b14013b78ae02d0115740477a8fcb3d1e51d26ab217517"
+    },
+    "data/derived/derivation-provenance.json": {
+      "bytes": 4815,
+      "sha256": "40b069f5b2ca0fd639aed75eb0edc974ed35874b12865a490d9923a0f7abeeab"
+    },
+    "data/derived/endpoint-rows.json": {
+      "bytes": 1723438,
+      "sha256": "ab44c2160f53f7a0dec7941205a50ea9aa62d8f6a2b79964a4883fe6a255e61e"
+    },
+    "data/derived/failure-atlas.json": {
+      "bytes": 48812,
+      "sha256": "f50310dff783130fb6b5c6eebf496c77aa936ed39577119c5fa0a5365bd8070c"
+    },
+    "data/derived/followup-endpoint-transitions.json": {
+      "bytes": 23856,
+      "sha256": "a0e4b4570122ac4e8271ad26c8edc8bf53be33a8a4706a1799d0e4a5d05b281c"
+    },
+    "data/derived/guard-linkage.json": {
+      "bytes": 6624687,
+      "sha256": "beb06e2f5a28934bca71c031f653cd470ebdaee8f8d8af30e4a0e51503eb58f2"
+    },
+    "data/derived/original-endpoint-rows.json": {
+      "bytes": 1703459,
+      "sha256": "e4b4666b7b2779caf6752099fc2af19af62c1a57b54da1a86f83689e97cc421d"
+    },
+    "data/derived/original-scientific-summary.json": {
+      "bytes": 14051,
+      "sha256": "040100211d8bec4c9d986ac361d757b8ec669219894aa3d07c0fb590cf0702d9"
+    },
+    "data/derived/original-separate-host-comparison.json": {
+      "bytes": 815,
+      "sha256": "658f8b4f7be8c145e7bab0463f5eab52c7d2249043125b20787a9b4d553666a5"
+    },
+    "data/derived/reconstruction-summary.json": {
+      "bytes": 23218,
+      "sha256": "d80112bb45d1e65233a27d5a24c8bd04c440d7b76e4b43a483588ce2365550ae"
+    },
+    "data/derived/recovery-horizon-comparison.json": {
+      "bytes": 3424,
+      "sha256": "8e9284345715e0b33ac8cce7306577ee2dd785ef5776efa3a6931998951830e9"
+    },
+    "data/derived/scientific-summary.json": {
+      "bytes": 13926,
+      "sha256": "460837ec7105a1b33be1633543cc50f22be169b75c19b5db2c3b411a59020eb4"
+    },
+    "data/derived/secondary-measurements.json": {
+      "bytes": 420776,
+      "sha256": "f2a4056eca1274dbb6144c8db8ef0b08d8bdaa428e8a6d59c8640a5f95f0f8e7"
+    },
+    "data/derived/separate-host-followup-verification.json": {
+      "bytes": 26579,
+      "sha256": "d258f9d55487a6d4bc0da2693c892b9c09a31e15d079f30d471302520dbc0882"
+    },
+    "data/derived/verify_reported_results.py": {
+      "bytes": 3893,
+      "sha256": "c856792afad2d0280a8014bfc9ec2ce98805514dd3e752dedf572854c309f8e5"
+    },
+    "data/provenance/RAW-SHA256SUMS.json": {
+      "bytes": 48283,
+      "sha256": "8bb571cd8de2f4ce8478512b51d890e84fb2b16d10cd504b46f829be98a1505a"
+    },
+    "data/provenance/companion-evidence-inventory.json": {
+      "bytes": 23086,
+      "sha256": "887913f0285fb887a18821f6608038edd901ee89bdb7f97ecd7379cb8ea904cd"
+    },
+    "data/provenance/episode-index.json": {
+      "bytes": 1110449,
+      "sha256": "c57819fa82244a8fdbf6798d9b3b41cd63ef53eb552aafa9f93efe56506322bd"
+    },
+    "data/provenance/raw-inventory.json": {
+      "bytes": 62983,
+      "sha256": "6142d17d489f774f1825ffdca32f48114910f0fd5a386999c9a6352c4e0bd64d"
+    },
+    "data/example/evaluator-source-sha256.json": {
+      "bytes": 10311,
+      "sha256": "8e91feb3170e91422c3ab97a3ed9fb57e06df95d4290c2036d19bf61a9ca1dfd"
+    },
+    "data/example/package-SHA256SUMS.json": {
+      "bytes": 260756,
+      "sha256": "f2765f348c37843ef4eeeaacb795b4d0300b30bf114d219e0c420f9f2f008716"
+    },
+    "data/example/provenance.json": {
+      "bytes": 1010132,
+      "sha256": "84d7e5daf9b3bf58b7be166744de73ef7da304eb0d2ef3d22c0063418967e7bb"
+    },
+    "data/example/release-receipt.json": {
+      "bytes": 761,
+      "sha256": "0e5641f35d3808dade408c33204731ddf45801069e3482fd650488ba958c77fe"
+    }
+  },
+  "release_assets": [
+    {
+      "asset": "evidence.zip",
+      "bytes": 952403,
+      "sha256": "8fb48df5102ba4b06c1adcae83c7434152bdadff31009bc9f0d4d066d44ad894",
+      "url": "https://github.com/theemperor66/colosseum-alignment-research/releases/download/v1.1.0/evidence.zip",
+      "scope": "Immutable compact evidence for all 792 selected episodes; byte-identical to data/compact/evidence.zip."
+    },
+    {
+      "asset": "colosseum-example-f4-r011-v1.1.0.zip",
+      "bytes": 49268340,
+      "sha256": "e550a2ed609a7441d478180166626fff42161372e68ae524b6b8e9ec5ad0d92d",
+      "files_in_zip": 1458,
+      "uncompressed_bytes": 145772291,
+      "source_archive": "pool5-v25.zip",
+      "episode_id": "heldout-b367c734b5a3-simulated_manipulation-r011__A2_assumption_aware",
+      "selection": "Retrospective diagnostic counterexample, selected with outcomes known",
+      "sensor_files": 1440,
+      "control_steps": 240,
+      "source_and_public_recomputation_equal": true,
+      "all_recomputed_fields_equal_reported_final_row": true,
+      "private_text_audit": "No nonloopback IP, home/workspace/root/opt absolute path or credential-like assignment found; loopback127.0.0.1 preserved in inert simulator identity.",
+      "url": "https://github.com/theemperor66/colosseum-alignment-research/releases/download/v1.1.0/colosseum-example-f4-r011-v1.1.0.zip"
+    }
+  ],
+  "full_raw_collection": {
+    "archives": 104,
+    "compressed_bytes": 32531349292,
+    "publicly_included": false,
+    "public_raw_subset": "one complete selected A2 F4 r011 episode"
+  },
+  "scientific_source_changed": false,
+  "new_experiments": false,
+  "data_reuse_license": "No additional blanket data reuse licence declared; see data/README.md#access-and-reuse."
+}

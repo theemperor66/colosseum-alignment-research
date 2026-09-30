@@ -1,0 +1,20 @@
+{
+  "utc": "2026-09-28T21:23:03.260334+00:00",
+  "comparison": {
+    "planned_attempts": true,
+    "observed_attempts": true,
+    "orphan_episode_count": true,
+    "results": true,
+    "aggregate": true,
+    "limits": true,
+    "all_accessed_raw_members_and_archive_seals_identical": true
+  },
+  "all_passed": true,
+  "planned": 792,
+  "observed": 789,
+  "raw_archives": 70,
+  "new_flights": 0,
+  "scope": "Separate Linux CPU execution, same raw evidence and unchanged bound scorer; all planned slots remain in denominator. Includes recovered interrupted-source attempts and all newly received closure packages. Not external peer review.",
+  "inputs_sha256": "a8d76168b56c8cebb2db116ffb8047bc216cc4a1b2d024f70ad2f9c140904e4f",
+  "result_sha256": "15de8c5293cb35974c18da645090ca6c91b948068f2d216dd5d6d95915778238"
+}

@@ -9,7 +9,9 @@ Colosseum simulator. It does not redistribute Colosseum, Unreal Engine,
 third-party simulator binaries, maps, textures, or other simulator assets.
 Their names identify external software and do not imply endorsement.
 Dependencies retain their respective licenses. The code license grants no
-rights to excluded data, manuscript materials, or third-party assets.
+rights to data files, manuscript materials, or third-party assets. The public
+evidence deposit and its reuse scope are described in data/README.md; rendered
+observations do not transfer rights to the simulator or its underlying assets.
 
 OpenAI Codex and language-model agents assisted implementation, analysis,
 verification, and documentation. The evaluated flight policy did not query

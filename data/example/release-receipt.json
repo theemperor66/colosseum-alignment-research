@@ -1,0 +1,15 @@
+{
+  "asset": "colosseum-example-f4-r011-v1.1.0.zip",
+  "bytes": 49268340,
+  "sha256": "e550a2ed609a7441d478180166626fff42161372e68ae524b6b8e9ec5ad0d92d",
+  "files_in_zip": 1458,
+  "uncompressed_bytes": 145772291,
+  "source_archive": "pool5-v25.zip",
+  "episode_id": "heldout-b367c734b5a3-simulated_manipulation-r011__A2_assumption_aware",
+  "selection": "Retrospective diagnostic counterexample, selected with outcomes known",
+  "sensor_files": 1440,
+  "control_steps": 240,
+  "source_and_public_recomputation_equal": true,
+  "all_recomputed_fields_equal_reported_final_row": true,
+  "private_text_audit": "No nonloopback IP, home/workspace/root/opt absolute path or credential-like assignment found; loopback127.0.0.1 preserved in inert simulator identity."
+}

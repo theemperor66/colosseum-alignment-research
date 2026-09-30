@@ -4,13 +4,13 @@ Contributions that improve inspectability, reproducibility or the clarity of evi
 
 ## Preserve the study record
 
-Release `v1.0.0` identifies the manuscript's public software companion. Frozen source, protocols and the disclosed corrected scorer preserve the study's measurement definitions. Changes to scientific behaviour belong in a new, clearly versioned implementation with an explanation of the changed assumptions. They must not be presented as code that produced the original results.
+Release `v1.0.0` identifies the original public software deposit; `v1.1.0` adds the authorised computed dataset and one authentic raw episode. Frozen source, protocols and the disclosed corrected scorer preserve the study's measurement definitions. Changes to scientific behaviour belong in a new, clearly versioned implementation with an explanation of the changed assumptions. They must not be presented as code that produced the original results.
 
 Distinguish a defect report from a proposed methodological extension. For a defect that affects reported measurements, state the affected inputs and expected effect and preserve the original output. A corrected analysis needs an explicit erratum and new provenance; changing a hash manifest alone is not a scientific correction.
 
 ## Propose a change
 
-Open an issue describing the concrete problem, affected release and expected behaviour. A useful reproduction includes the smallest shareable example, command and observed result. Keep private records, credentials, generated research datasets and third-party assets out of issues and pull requests.
+Open an issue describing the concrete problem, affected release and expected behaviour. A useful reproduction includes the smallest shareable example, command and observed result. Keep credentials, private records and restricted third-party assets out of issues and pull requests. Reference the versioned public data when reporting its results; additional research data require explicit publication authorisation, provenance and a content review.
 
 For a pull request:
 

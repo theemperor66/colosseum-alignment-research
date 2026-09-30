@@ -5,20 +5,21 @@ Choose a reproduction level before interpreting a successful command. Each level
 | Level | Required inputs | What success establishes |
 |---|---|---|
 | Software checks | This repository and Python dependencies | Specified software behaviour on synthetic fixtures. |
-| Reported arithmetic | This repository and the manuscript's compact `evidence.zip` | Accounting, contrasts and hashes computed from saved endpoint labels. |
+| Reported arithmetic | This repository, including `data/compact/evidence.zip` | Accounting, contrasts and hashes computed from all 792 saved endpoint labels. |
+| Published raw example | One complete recorded episode from the v1.1.0 release and the frozen scorer | Endpoint recalculation for that episode and inspection of its original observations. |
 | Raw-record reanalysis | Sealed raw archives, bound source and dependencies | Recalculation of measurements from retained physical and image records. |
 | New simulated flights | Qualified simulator, scene, settings, protocols and runtime | New observations under the declared apparatus and execution conditions. |
 
-The first two levels need no GPU or running simulator. Neither substitutes for the third or fourth.
+Software checks, arithmetic verification and raw-record recalculation need no GPU or running simulator. Recalculating the published example does not reproduce the measurements for the full collection.
 
 ## Check the compact evidence package
 
-Obtain `evidence.zip` from the companion manuscript package or extract it from the PDF's file attachments. A PDF reader's attachment panel exposes the archive; extracting page text does not extract attached files. The repository does not include the archive or generated datasets.
+The unchanged compact archive is included at [`data/compact/evidence.zip`](../data/compact/evidence.zip). Its 16 `review-data/` members are also available as byte-identical browsable files under [`data/derived/`](../data/derived/). The manuscript's PDF attachment contains the same archive. See the [data guide](../data/README.md) for the public deposit and the boundaries of the raw example.
 
 From the repository root:
 
 ```bash
-python3 scripts/verify_paper.py /path/to/evidence.zip
+python3 scripts/verify_paper.py data/compact/evidence.zip
 ```
 
 Alternatively, pass a freshly extracted directory containing the archive's `review-data/` and `frozen-analysis/` directories:
@@ -44,7 +45,7 @@ The compact archive supplied with this manuscript has SHA-256:
 8fb48df5102ba4b06c1adcae83c7434152bdadff31009bc9f0d4d066d44ad894
 ```
 
-A matching digest establishes byte identity to this reference, not independent authentication of the scientific provenance. The archive's historical README uses an earlier working title; its unchanged source and evidence belong to the completed study described by the current manuscript.
+A matching digest establishes byte identity to this reference, not independent authentication of the scientific provenance. The archive's historical README uses an earlier working title and describes the prepublication access state. Its bytes remain unchanged for provenance. The author publicly deposits that same archive in v1.1.0; the [current data guide](../data/README.md) describes its access and reuse terms.
 
 ## Install and run CPU checks
 
@@ -74,7 +75,7 @@ Tests use synthetic inputs. Their passing status is evidence about software beha
 
 The package under `src/colosseum_assurance/` preserves the study source snapshot. `study/` retains the fixed plan, 15 protocols and study-specific analysis files. `study/release-file-provenance.json` maps released files to their archived counterparts and hashes. `python scripts/verify_source.py` checks the released bytes against that mapping. Release packaging and verification interfaces are distinguished from those frozen scientific files.
 
-`study/secondary_functions.py` and `study/guard_linkage_audit.py` are historical analysis helpers retained with their original bytes and path assumptions. They refer to the original analysis directory layout and are not standalone public quick-start commands. The portable public entry points are under `scripts/`; raw reanalysis additionally requires the bound inputs described below. Public release version 1.0.0 preserves the package's internal version 0.1.0.
+`study/secondary_functions.py` and `study/guard_linkage_audit.py` are historical analysis helpers retained with their original bytes and path assumptions. They refer to the original analysis directory layout and are not standalone public quick-start commands. The portable public entry points are under `scripts/`; raw reanalysis additionally requires the bound inputs described below. Public release v1.1.0 adds evidence access while preserving v1.0.0's scientific files and the package's internal version 0.1.0.
 
 The disclosed corrected endpoint scorer has SHA-256:
 
@@ -88,7 +89,9 @@ The frozen plan intentionally retains its original scorer binding. Authenticated
 
 ## Recalculate endpoints from raw records
 
-The compact evidence includes derived endpoint rows and verification summaries. Full reanalysis additionally requires the sealed RGB/depth and trajectory archives, their inventories, original input bindings and the appropriate execution environment. These raw inputs are separately retained and are not publicly downloadable from this repository. No automatic access arrangement is implied.
+The compact evidence contains all selected endpoint rows and verification summaries. The release additionally provides one complete A2 F4 r011 episode as [colosseum-example-f4-r011-v1.1.0.zip](https://github.com/theemperor66/colosseum-alignment-research/releases/download/v1.1.0/colosseum-example-f4-r011-v1.1.0.zip). Its README and included `recompute.py` describe recalculation with this repository's frozen scorer. The example contains original sensor files, retained states, the privileged ledger, scenario and protocol; any infrastructure-path substitutions are explicitly recorded in its provenance. It was selected with its outcome known. Its result establishes no representative rate.
+
+The full set of 104 sealed raw archives is not part of the public download. Full reanalysis requires those RGB/depth and trajectory archives, their inventories, original input bindings and the appropriate execution environment. The [public provenance inventory](../data/provenance/raw-inventory.json) identifies their sizes and hashes, while the [episode index](../data/provenance/episode-index.json) identifies all selected episode, ledger and scenario members. The author retains the complete collection for an agreed examiner handover; public access to the inventory does not grant server access or establish receipt of the raw collection.
 
 Appendix A.6 describes completed separate-host recomputation, including the original bounded analysis, follow-up batches and first-complete combination. Appendix A.7 records provenance, and A.9 describes deviations. Those executions compare saved endpoints, aggregates and accessed-member bindings. They support computational reproduction, not external human adjudication or independent validation of the normative specification.
 

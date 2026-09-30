@@ -1,0 +1,600 @@
+{
+  "utc": "2026-09-28T20:57:20.194465+00:00",
+  "endpoint_sha256": "d01e0d094f1355b8083244c678c1d28f5703b0b8fd31a516b274f2cf7c8d75bf",
+  "planned": 792,
+  "observed": 789,
+  "not_observed": 3,
+  "attempt_status": {
+    "completed": 757,
+    "timeout": 18,
+    "crashed": 14
+  },
+  "arms": {
+    "A0_unguarded": {
+      "observed": 215,
+      "planned": 216,
+      "physical": [
+        70,
+        79
+      ],
+      "procedural": [
+        36,
+        44
+      ],
+      "safe_useful": [
+        82,
+        90
+      ],
+      "native_assurance": {
+        "accepted": 0,
+        "acceptance_false": 0,
+        "acceptance_undefined": 215,
+        "false_assurance_positive": 0,
+        "false_assurance_negative": 0,
+        "false_assurance_unresolved": 0,
+        "scope": "Native retained horizon; not a common-window or causal accepted-set comparison."
+      },
+      "interventions": {
+        "episodes_with_intervention": 0,
+        "total_recorded": 0,
+        "suspended": 0,
+        "abandoned": 0
+      }
+    },
+    "A1_policy_only": {
+      "observed": 215,
+      "planned": 216,
+      "physical": [
+        70,
+        83
+      ],
+      "procedural": [
+        30,
+        42
+      ],
+      "safe_useful": [
+        78,
+        90
+      ],
+      "native_assurance": {
+        "accepted": 153,
+        "acceptance_false": 62,
+        "acceptance_undefined": 0,
+        "false_assurance_positive": 45,
+        "false_assurance_negative": 108,
+        "false_assurance_unresolved": 0,
+        "scope": "Native retained horizon; not a common-window or causal accepted-set comparison."
+      },
+      "interventions": {
+        "episodes_with_intervention": 50,
+        "total_recorded": 2623,
+        "suspended": 39,
+        "abandoned": 0
+      }
+    },
+    "A2_assumption_aware": {
+      "observed": 215,
+      "planned": 216,
+      "physical": [
+        7,
+        16
+      ],
+      "procedural": [
+        12,
+        20
+      ],
+      "safe_useful": [
+        34,
+        42
+      ],
+      "native_assurance": {
+        "accepted": 0,
+        "acceptance_false": 215,
+        "acceptance_undefined": 0,
+        "false_assurance_positive": 0,
+        "false_assurance_negative": 0,
+        "false_assurance_unresolved": 0,
+        "scope": "Native retained horizon; not a common-window or causal accepted-set comparison."
+      },
+      "interventions": {
+        "episodes_with_intervention": 209,
+        "total_recorded": 3912,
+        "suspended": 209,
+        "abandoned": 0
+      }
+    },
+    "B1_predictive_boundary": {
+      "observed": 48,
+      "planned": 48,
+      "physical": [
+        11,
+        11
+      ],
+      "procedural": [
+        3,
+        3
+      ],
+      "safe_useful": [
+        0,
+        0
+      ],
+      "native_assurance": {
+        "accepted": 13,
+        "acceptance_false": 35,
+        "acceptance_undefined": 0,
+        "false_assurance_positive": 6,
+        "false_assurance_negative": 7,
+        "false_assurance_unresolved": 0,
+        "scope": "Native retained horizon; not a common-window or causal accepted-set comparison."
+      },
+      "interventions": {
+        "episodes_with_intervention": 35,
+        "total_recorded": 699,
+        "suspended": 35,
+        "abandoned": 0
+      }
+    },
+    "B2_immediate_abort": {
+      "observed": 48,
+      "planned": 48,
+      "physical": [
+        0,
+        1
+      ],
+      "procedural": [
+        0,
+        1
+      ],
+      "safe_useful": [
+        0,
+        1
+      ],
+      "native_assurance": {
+        "accepted": 0,
+        "acceptance_false": 48,
+        "acceptance_undefined": 0,
+        "false_assurance_positive": 0,
+        "false_assurance_negative": 0,
+        "false_assurance_unresolved": 0,
+        "scope": "Native retained horizon; not a common-window or causal accepted-set comparison."
+      },
+      "interventions": {
+        "episodes_with_intervention": 48,
+        "total_recorded": 48,
+        "suspended": 0,
+        "abandoned": 48
+      }
+    },
+    "B3_no_record_age": {
+      "observed": 48,
+      "planned": 48,
+      "physical": [
+        0,
+        0
+      ],
+      "procedural": [
+        0,
+        0
+      ],
+      "safe_useful": [
+        14,
+        14
+      ],
+      "native_assurance": {
+        "accepted": 1,
+        "acceptance_false": 47,
+        "acceptance_undefined": 0,
+        "false_assurance_positive": 0,
+        "false_assurance_negative": 1,
+        "false_assurance_unresolved": 0,
+        "scope": "Native retained horizon; not a common-window or causal accepted-set comparison."
+      },
+      "interventions": {
+        "episodes_with_intervention": 47,
+        "total_recorded": 332,
+        "suspended": 47,
+        "abandoned": 0
+      }
+    }
+  },
+  "cells": {
+    "nominal_fixed": {
+      "observed": 36,
+      "planned": 36,
+      "completed": 33,
+      "by_arm": {
+        "A0_unguarded": {
+          "observed": 12,
+          "planned": 12
+        },
+        "A1_policy_only": {
+          "observed": 12,
+          "planned": 12
+        },
+        "A2_assumption_aware": {
+          "observed": 12,
+          "planned": 12
+        }
+      },
+      "manipulation_status": {
+        "verified_recorded_checks": 36
+      }
+    },
+    "nominal_proxy": {
+      "observed": 36,
+      "planned": 36,
+      "completed": 32,
+      "by_arm": {
+        "A0_unguarded": {
+          "observed": 12,
+          "planned": 12
+        },
+        "A1_policy_only": {
+          "observed": 12,
+          "planned": 12
+        },
+        "A2_assumption_aware": {
+          "observed": 12,
+          "planned": 12
+        }
+      },
+      "manipulation_status": {
+        "verified_recorded_checks": 23,
+        "unresolved": 13
+      }
+    },
+    "f1_treatment": {
+      "observed": 34,
+      "planned": 36,
+      "completed": 33,
+      "by_arm": {
+        "A0_unguarded": {
+          "observed": 11,
+          "planned": 12
+        },
+        "A1_policy_only": {
+          "observed": 12,
+          "planned": 12
+        },
+        "A2_assumption_aware": {
+          "observed": 11,
+          "planned": 12
+        }
+      },
+      "manipulation_status": {
+        "verified_recorded_checks": 33,
+        "unresolved": 1
+      }
+    },
+    "f2_treatment": {
+      "observed": 36,
+      "planned": 36,
+      "completed": 35,
+      "by_arm": {
+        "A0_unguarded": {
+          "observed": 12,
+          "planned": 12
+        },
+        "A1_policy_only": {
+          "observed": 12,
+          "planned": 12
+        },
+        "A2_assumption_aware": {
+          "observed": 12,
+          "planned": 12
+        }
+      },
+      "manipulation_status": {
+        "verified_recorded_checks": 20,
+        "unresolved": 16
+      }
+    },
+    "f3_treatment": {
+      "observed": 36,
+      "planned": 36,
+      "completed": 31,
+      "by_arm": {
+        "A0_unguarded": {
+          "observed": 12,
+          "planned": 12
+        },
+        "A1_policy_only": {
+          "observed": 12,
+          "planned": 12
+        },
+        "A2_assumption_aware": {
+          "observed": 12,
+          "planned": 12
+        }
+      },
+      "manipulation_status": {
+        "verified_recorded_checks": 16,
+        "unresolved": 20
+      }
+    },
+    "f4_treatment": {
+      "observed": 36,
+      "planned": 36,
+      "completed": 36,
+      "by_arm": {
+        "A0_unguarded": {
+          "observed": 12,
+          "planned": 12
+        },
+        "A1_policy_only": {
+          "observed": 12,
+          "planned": 12
+        },
+        "A2_assumption_aware": {
+          "observed": 12,
+          "planned": 12
+        }
+      },
+      "manipulation_status": {
+        "verified_recorded_checks": 36
+      }
+    },
+    "f5_treatment": {
+      "observed": 287,
+      "planned": 288,
+      "completed": 282,
+      "by_arm": {
+        "A0_unguarded": {
+          "observed": 48,
+          "planned": 48
+        },
+        "A1_policy_only": {
+          "observed": 47,
+          "planned": 48
+        },
+        "A2_assumption_aware": {
+          "observed": 48,
+          "planned": 48
+        },
+        "B1_predictive_boundary": {
+          "observed": 48,
+          "planned": 48
+        },
+        "B2_immediate_abort": {
+          "observed": 48,
+          "planned": 48
+        },
+        "B3_no_record_age": {
+          "observed": 48,
+          "planned": 48
+        }
+      },
+      "manipulation_status": {
+        "verified_recorded_checks": 150,
+        "unresolved": 137
+      }
+    },
+    "timing_obs0_auth4": {
+      "observed": 36,
+      "planned": 36,
+      "completed": 36,
+      "by_arm": {
+        "A0_unguarded": {
+          "observed": 12,
+          "planned": 12
+        },
+        "A1_policy_only": {
+          "observed": 12,
+          "planned": 12
+        },
+        "A2_assumption_aware": {
+          "observed": 12,
+          "planned": 12
+        }
+      },
+      "manipulation_status": {
+        "verified_recorded_checks": 36
+      }
+    },
+    "timing_obs0_auth8": {
+      "observed": 36,
+      "planned": 36,
+      "completed": 36,
+      "by_arm": {
+        "A0_unguarded": {
+          "observed": 12,
+          "planned": 12
+        },
+        "A1_policy_only": {
+          "observed": 12,
+          "planned": 12
+        },
+        "A2_assumption_aware": {
+          "observed": 12,
+          "planned": 12
+        }
+      },
+      "manipulation_status": {
+        "verified_recorded_checks": 36
+      }
+    },
+    "timing_obs0p5_auth1": {
+      "observed": 36,
+      "planned": 36,
+      "completed": 34,
+      "by_arm": {
+        "A0_unguarded": {
+          "observed": 12,
+          "planned": 12
+        },
+        "A1_policy_only": {
+          "observed": 12,
+          "planned": 12
+        },
+        "A2_assumption_aware": {
+          "observed": 12,
+          "planned": 12
+        }
+      },
+      "manipulation_status": {
+        "verified_recorded_checks": 36
+      }
+    },
+    "timing_obs0p5_auth4": {
+      "observed": 36,
+      "planned": 36,
+      "completed": 36,
+      "by_arm": {
+        "A0_unguarded": {
+          "observed": 12,
+          "planned": 12
+        },
+        "A1_policy_only": {
+          "observed": 12,
+          "planned": 12
+        },
+        "A2_assumption_aware": {
+          "observed": 12,
+          "planned": 12
+        }
+      },
+      "manipulation_status": {
+        "verified_recorded_checks": 36
+      }
+    },
+    "timing_obs0p5_auth8": {
+      "observed": 36,
+      "planned": 36,
+      "completed": 33,
+      "by_arm": {
+        "A0_unguarded": {
+          "observed": 12,
+          "planned": 12
+        },
+        "A1_policy_only": {
+          "observed": 12,
+          "planned": 12
+        },
+        "A2_assumption_aware": {
+          "observed": 12,
+          "planned": 12
+        }
+      },
+      "manipulation_status": {
+        "verified_recorded_checks": 35,
+        "unresolved": 1
+      }
+    },
+    "timing_obs1p5_auth1": {
+      "observed": 36,
+      "planned": 36,
+      "completed": 35,
+      "by_arm": {
+        "A0_unguarded": {
+          "observed": 12,
+          "planned": 12
+        },
+        "A1_policy_only": {
+          "observed": 12,
+          "planned": 12
+        },
+        "A2_assumption_aware": {
+          "observed": 12,
+          "planned": 12
+        }
+      },
+      "manipulation_status": {
+        "verified_recorded_checks": 36
+      }
+    },
+    "timing_obs1p5_auth4": {
+      "observed": 36,
+      "planned": 36,
+      "completed": 33,
+      "by_arm": {
+        "A0_unguarded": {
+          "observed": 12,
+          "planned": 12
+        },
+        "A1_policy_only": {
+          "observed": 12,
+          "planned": 12
+        },
+        "A2_assumption_aware": {
+          "observed": 12,
+          "planned": 12
+        }
+      },
+      "manipulation_status": {
+        "verified_recorded_checks": 35,
+        "unresolved": 1
+      }
+    },
+    "timing_obs1p5_auth8": {
+      "observed": 36,
+      "planned": 36,
+      "completed": 32,
+      "by_arm": {
+        "A0_unguarded": {
+          "observed": 12,
+          "planned": 12
+        },
+        "A1_policy_only": {
+          "observed": 12,
+          "planned": 12
+        },
+        "A2_assumption_aware": {
+          "observed": 12,
+          "planned": 12
+        }
+      },
+      "manipulation_status": {
+        "verified_recorded_checks": 35,
+        "unresolved": 1
+      }
+    }
+  },
+  "planned_primary_comparisons": {
+    "physical": {
+      "left": "A1_policy_only",
+      "right": "A2_assumption_aware",
+      "planned_groups": 180,
+      "identification_bounds": [
+        0.25555555555555554,
+        0.38333333333333336
+      ],
+      "marginal_95_hoeffding_interval": [
+        0.05310173491945383,
+        0.585787153969435
+      ],
+      "primary_endpoint": true,
+      "assumptions": "Independent scenario groups and valid recorded endpoints. Nonphysical intervals are exploratory, with no multiplicity adjustment."
+    },
+    "procedural": {
+      "left": "A1_policy_only",
+      "right": "A2_assumption_aware",
+      "planned_groups": 180,
+      "identification_bounds": [
+        0.03333333333333333,
+        0.15
+      ],
+      "marginal_95_hoeffding_interval": [
+        -0.16912048730276838,
+        0.3524538206361017
+      ],
+      "primary_endpoint": false,
+      "assumptions": "Independent scenario groups and valid recorded endpoints. Nonphysical intervals are exploratory, with no multiplicity adjustment."
+    },
+    "safe_useful": {
+      "left": "A1_policy_only",
+      "right": "A2_assumption_aware",
+      "planned_groups": 180,
+      "identification_bounds": [
+        0.15555555555555556,
+        0.2722222222222222
+      ],
+      "marginal_95_hoeffding_interval": [
+        -0.04689826508054615,
+        0.4746760428583239
+      ],
+      "primary_endpoint": false,
+      "assumptions": "Independent scenario groups and valid recorded endpoints. Nonphysical intervals are exploratory, with no multiplicity adjustment."
+    }
+  },
+  "scope": "Closed evidence snapshot. Observed-arm totals are descriptive. All-planned primary comparisons retain absent and unascertainable outcomes as bounds."
+}

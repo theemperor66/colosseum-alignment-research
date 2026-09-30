@@ -1,8 +1,8 @@
 cff-version: 1.2.0
-message: "Please cite the versioned software release when using this research code."
+message: "Please cite the versioned research release when using this code or its deposited evidence."
 type: software
 title: "Colosseum Alignment Research"
-version: 1.0.0
+version: 1.1.0
 date-released: 2026-09-30
 authors:
   - family-names: Marzguioui
@@ -10,13 +10,15 @@ authors:
     affiliation: Universität Regensburg
     alias: theemperor66
 repository-code: "https://github.com/theemperor66/colosseum-alignment-research"
-url: "https://github.com/theemperor66/colosseum-alignment-research/releases/tag/v1.0.0"
+url: "https://github.com/theemperor66/colosseum-alignment-research/releases/tag/v1.1.0"
 license: Apache-2.0
 abstract: >-
   Research code accompanying Simulation-Based Alignment Research for Embodied
   Agents: A Colosseum Testbed for Autonomous UAVs in Civilian Defence. Includes
   the frozen controller, runtime safeguards, independent evaluation, protocols,
-  and tools for checking the separately supplied compact evidence archive.
+  the complete computed dataset for 792 selected episodes, one authentic recorded
+  episode, and tools for checking the deposited evidence. The source-code license
+  does not grant rights to third-party simulator assets or a blanket data license.
 keywords:
   - embodied agents
   - AI alignment

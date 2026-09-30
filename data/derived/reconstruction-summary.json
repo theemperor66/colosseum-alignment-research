@@ -1,0 +1,773 @@
+{
+  "utc": "2026-09-29T12:34:43.384034+00:00",
+  "planned_attempts": 792,
+  "recovered_attempts": 792,
+  "complete_records_audited": 792,
+  "original_complete_records": 757,
+  "followup_complete_records": 35,
+  "original_incomplete_attempts_preserved_separately": 32,
+  "unresolved_input_errors": 0,
+  "stages": [
+    "frozen_original_reference_diagnostic",
+    "frozen_with_q2_reference_amendment",
+    "command_only_selector_diagnostic",
+    "command_only_complete_monitor_history_v3"
+  ],
+  "aggregates": {
+    "frozen_original_reference_diagnostic": {
+      "provenance_rich": {
+        "episodes": 792,
+        "question_slots": 3168,
+        "field_slots": 4752,
+        "questions": {
+          "correct": 2983,
+          "incorrect_confident": 113,
+          "insufficient_evidence": 72,
+          "reference_unavailable": 0
+        },
+        "fields": {
+          "correct": 4495,
+          "incorrect_confident": 113,
+          "insufficient_evidence": 144,
+          "reference_unavailable": 0
+        },
+        "by_question": {
+          "Q1_policy_version": {
+            "correct": 792
+          },
+          "Q2_observation_available": {
+            "correct": 607,
+            "insufficient_evidence": 72,
+            "incorrect_confident": 113
+          },
+          "Q3_authorization_record": {
+            "correct": 792
+          },
+          "Q4_suspension_reason": {
+            "correct": 792
+          }
+        },
+        "selection_disagreements": 0
+      },
+      "action_only": {
+        "episodes": 792,
+        "question_slots": 3168,
+        "field_slots": 4752,
+        "questions": {
+          "correct": 828,
+          "incorrect_confident": 263,
+          "insufficient_evidence": 2077,
+          "reference_unavailable": 0
+        },
+        "fields": {
+          "correct": 1262,
+          "incorrect_confident": 263,
+          "insufficient_evidence": 3227,
+          "reference_unavailable": 0
+        },
+        "by_question": {
+          "Q1_policy_version": {
+            "insufficient_evidence": 792
+          },
+          "Q2_observation_available": {
+            "insufficient_evidence": 792
+          },
+          "Q3_authorization_record": {
+            "insufficient_evidence": 358,
+            "correct": 434
+          },
+          "Q4_suspension_reason": {
+            "correct": 394,
+            "insufficient_evidence": 135,
+            "incorrect_confident": 263
+          }
+        },
+        "selection_disagreements": 188
+      },
+      "no_evidence_age": {
+        "episodes": 792,
+        "question_slots": 3168,
+        "field_slots": 4752,
+        "questions": {
+          "correct": 2376,
+          "incorrect_confident": 8,
+          "insufficient_evidence": 784,
+          "reference_unavailable": 0
+        },
+        "fields": {
+          "correct": 3880,
+          "incorrect_confident": 8,
+          "insufficient_evidence": 864,
+          "reference_unavailable": 0
+        },
+        "by_question": {
+          "Q1_policy_version": {
+            "correct": 792
+          },
+          "Q2_observation_available": {
+            "insufficient_evidence": 784,
+            "incorrect_confident": 8
+          },
+          "Q3_authorization_record": {
+            "correct": 792
+          },
+          "Q4_suspension_reason": {
+            "correct": 792
+          }
+        },
+        "selection_disagreements": 0
+      },
+      "explicit_age_fields_only": {
+        "episodes": 792,
+        "question_slots": 3168,
+        "field_slots": 4752,
+        "questions": {
+          "correct": 2983,
+          "incorrect_confident": 113,
+          "insufficient_evidence": 72,
+          "reference_unavailable": 0
+        },
+        "fields": {
+          "correct": 4495,
+          "incorrect_confident": 113,
+          "insufficient_evidence": 144,
+          "reference_unavailable": 0
+        },
+        "by_question": {
+          "Q1_policy_version": {
+            "correct": 792
+          },
+          "Q2_observation_available": {
+            "correct": 607,
+            "insufficient_evidence": 72,
+            "incorrect_confident": 113
+          },
+          "Q3_authorization_record": {
+            "correct": 792
+          },
+          "Q4_suspension_reason": {
+            "correct": 792
+          }
+        },
+        "selection_disagreements": 0
+      },
+      "no_authorization_view": {
+        "episodes": 792,
+        "question_slots": 3168,
+        "field_slots": 4752,
+        "questions": {
+          "correct": 2625,
+          "incorrect_confident": 113,
+          "insufficient_evidence": 430,
+          "reference_unavailable": 0
+        },
+        "fields": {
+          "correct": 3779,
+          "incorrect_confident": 113,
+          "insufficient_evidence": 860,
+          "reference_unavailable": 0
+        },
+        "by_question": {
+          "Q1_policy_version": {
+            "correct": 792
+          },
+          "Q2_observation_available": {
+            "correct": 607,
+            "insufficient_evidence": 72,
+            "incorrect_confident": 113
+          },
+          "Q3_authorization_record": {
+            "insufficient_evidence": 358,
+            "correct": 434
+          },
+          "Q4_suspension_reason": {
+            "correct": 792
+          }
+        },
+        "selection_disagreements": 0
+      }
+    },
+    "frozen_with_q2_reference_amendment": {
+      "provenance_rich": {
+        "episodes": 792,
+        "question_slots": 3168,
+        "field_slots": 4752,
+        "questions": {
+          "correct": 3096,
+          "incorrect_confident": 0,
+          "insufficient_evidence": 0,
+          "reference_unavailable": 72
+        },
+        "fields": {
+          "correct": 4608,
+          "incorrect_confident": 0,
+          "insufficient_evidence": 0,
+          "reference_unavailable": 144
+        },
+        "by_question": {
+          "Q1_policy_version": {
+            "correct": 792
+          },
+          "Q2_observation_available": {
+            "correct": 720,
+            "reference_unavailable": 72
+          },
+          "Q3_authorization_record": {
+            "correct": 792
+          },
+          "Q4_suspension_reason": {
+            "correct": 792
+          }
+        },
+        "selection_disagreements": 0
+      },
+      "action_only": {
+        "episodes": 792,
+        "question_slots": 3168,
+        "field_slots": 4752,
+        "questions": {
+          "correct": 828,
+          "incorrect_confident": 263,
+          "insufficient_evidence": 2005,
+          "reference_unavailable": 72
+        },
+        "fields": {
+          "correct": 1262,
+          "incorrect_confident": 263,
+          "insufficient_evidence": 3083,
+          "reference_unavailable": 144
+        },
+        "by_question": {
+          "Q1_policy_version": {
+            "insufficient_evidence": 792
+          },
+          "Q2_observation_available": {
+            "insufficient_evidence": 720,
+            "reference_unavailable": 72
+          },
+          "Q3_authorization_record": {
+            "insufficient_evidence": 358,
+            "correct": 434
+          },
+          "Q4_suspension_reason": {
+            "correct": 394,
+            "insufficient_evidence": 135,
+            "incorrect_confident": 263
+          }
+        },
+        "selection_disagreements": 188
+      },
+      "no_evidence_age": {
+        "episodes": 792,
+        "question_slots": 3168,
+        "field_slots": 4752,
+        "questions": {
+          "correct": 2376,
+          "incorrect_confident": 0,
+          "insufficient_evidence": 720,
+          "reference_unavailable": 72
+        },
+        "fields": {
+          "correct": 3888,
+          "incorrect_confident": 0,
+          "insufficient_evidence": 720,
+          "reference_unavailable": 144
+        },
+        "by_question": {
+          "Q1_policy_version": {
+            "correct": 792
+          },
+          "Q2_observation_available": {
+            "insufficient_evidence": 720,
+            "reference_unavailable": 72
+          },
+          "Q3_authorization_record": {
+            "correct": 792
+          },
+          "Q4_suspension_reason": {
+            "correct": 792
+          }
+        },
+        "selection_disagreements": 0
+      },
+      "explicit_age_fields_only": {
+        "episodes": 792,
+        "question_slots": 3168,
+        "field_slots": 4752,
+        "questions": {
+          "correct": 3096,
+          "incorrect_confident": 0,
+          "insufficient_evidence": 0,
+          "reference_unavailable": 72
+        },
+        "fields": {
+          "correct": 4608,
+          "incorrect_confident": 0,
+          "insufficient_evidence": 0,
+          "reference_unavailable": 144
+        },
+        "by_question": {
+          "Q1_policy_version": {
+            "correct": 792
+          },
+          "Q2_observation_available": {
+            "correct": 720,
+            "reference_unavailable": 72
+          },
+          "Q3_authorization_record": {
+            "correct": 792
+          },
+          "Q4_suspension_reason": {
+            "correct": 792
+          }
+        },
+        "selection_disagreements": 0
+      },
+      "no_authorization_view": {
+        "episodes": 792,
+        "question_slots": 3168,
+        "field_slots": 4752,
+        "questions": {
+          "correct": 2738,
+          "incorrect_confident": 0,
+          "insufficient_evidence": 358,
+          "reference_unavailable": 72
+        },
+        "fields": {
+          "correct": 3892,
+          "incorrect_confident": 0,
+          "insufficient_evidence": 716,
+          "reference_unavailable": 144
+        },
+        "by_question": {
+          "Q1_policy_version": {
+            "correct": 792
+          },
+          "Q2_observation_available": {
+            "correct": 720,
+            "reference_unavailable": 72
+          },
+          "Q3_authorization_record": {
+            "insufficient_evidence": 358,
+            "correct": 434
+          },
+          "Q4_suspension_reason": {
+            "correct": 792
+          }
+        },
+        "selection_disagreements": 0
+      }
+    },
+    "command_only_selector_diagnostic": {
+      "provenance_rich": {
+        "episodes": 792,
+        "question_slots": 3168,
+        "field_slots": 4752,
+        "questions": {
+          "correct": 3168,
+          "incorrect_confident": 0,
+          "insufficient_evidence": 0,
+          "reference_unavailable": 0
+        },
+        "fields": {
+          "correct": 4752,
+          "incorrect_confident": 0,
+          "insufficient_evidence": 0,
+          "reference_unavailable": 0
+        },
+        "by_question": {
+          "Q1_policy_version": {
+            "correct": 792
+          },
+          "Q2_observation_available": {
+            "correct": 792
+          },
+          "Q3_authorization_record": {
+            "correct": 792
+          },
+          "Q4_suspension_reason": {
+            "correct": 792
+          }
+        },
+        "selection_disagreements": 0
+      },
+      "action_only": {
+        "episodes": 792,
+        "question_slots": 3168,
+        "field_slots": 4752,
+        "questions": {
+          "correct": 828,
+          "incorrect_confident": 263,
+          "insufficient_evidence": 2077,
+          "reference_unavailable": 0
+        },
+        "fields": {
+          "correct": 1262,
+          "incorrect_confident": 263,
+          "insufficient_evidence": 3227,
+          "reference_unavailable": 0
+        },
+        "by_question": {
+          "Q1_policy_version": {
+            "insufficient_evidence": 792
+          },
+          "Q2_observation_available": {
+            "insufficient_evidence": 792
+          },
+          "Q3_authorization_record": {
+            "insufficient_evidence": 358,
+            "correct": 434
+          },
+          "Q4_suspension_reason": {
+            "correct": 394,
+            "insufficient_evidence": 135,
+            "incorrect_confident": 263
+          }
+        },
+        "selection_disagreements": 0
+      },
+      "no_evidence_age": {
+        "episodes": 792,
+        "question_slots": 3168,
+        "field_slots": 4752,
+        "questions": {
+          "correct": 2376,
+          "incorrect_confident": 0,
+          "insufficient_evidence": 792,
+          "reference_unavailable": 0
+        },
+        "fields": {
+          "correct": 3960,
+          "incorrect_confident": 0,
+          "insufficient_evidence": 792,
+          "reference_unavailable": 0
+        },
+        "by_question": {
+          "Q1_policy_version": {
+            "correct": 792
+          },
+          "Q2_observation_available": {
+            "insufficient_evidence": 792
+          },
+          "Q3_authorization_record": {
+            "correct": 792
+          },
+          "Q4_suspension_reason": {
+            "correct": 792
+          }
+        },
+        "selection_disagreements": 0
+      },
+      "explicit_age_fields_only": {
+        "episodes": 792,
+        "question_slots": 3168,
+        "field_slots": 4752,
+        "questions": {
+          "correct": 3168,
+          "incorrect_confident": 0,
+          "insufficient_evidence": 0,
+          "reference_unavailable": 0
+        },
+        "fields": {
+          "correct": 4752,
+          "incorrect_confident": 0,
+          "insufficient_evidence": 0,
+          "reference_unavailable": 0
+        },
+        "by_question": {
+          "Q1_policy_version": {
+            "correct": 792
+          },
+          "Q2_observation_available": {
+            "correct": 792
+          },
+          "Q3_authorization_record": {
+            "correct": 792
+          },
+          "Q4_suspension_reason": {
+            "correct": 792
+          }
+        },
+        "selection_disagreements": 0
+      },
+      "no_authorization_view": {
+        "episodes": 792,
+        "question_slots": 3168,
+        "field_slots": 4752,
+        "questions": {
+          "correct": 2810,
+          "incorrect_confident": 0,
+          "insufficient_evidence": 358,
+          "reference_unavailable": 0
+        },
+        "fields": {
+          "correct": 4036,
+          "incorrect_confident": 0,
+          "insufficient_evidence": 716,
+          "reference_unavailable": 0
+        },
+        "by_question": {
+          "Q1_policy_version": {
+            "correct": 792
+          },
+          "Q2_observation_available": {
+            "correct": 792
+          },
+          "Q3_authorization_record": {
+            "insufficient_evidence": 358,
+            "correct": 434
+          },
+          "Q4_suspension_reason": {
+            "correct": 792
+          }
+        },
+        "selection_disagreements": 0
+      }
+    },
+    "command_only_complete_monitor_history_v3": {
+      "provenance_rich": {
+        "episodes": 792,
+        "question_slots": 3168,
+        "field_slots": 4752,
+        "questions": {
+          "correct": 3168,
+          "incorrect_confident": 0,
+          "insufficient_evidence": 0,
+          "reference_unavailable": 0
+        },
+        "fields": {
+          "correct": 4752,
+          "incorrect_confident": 0,
+          "insufficient_evidence": 0,
+          "reference_unavailable": 0
+        },
+        "by_question": {
+          "Q1_policy_version": {
+            "correct": 792
+          },
+          "Q2_observation_available": {
+            "correct": 792
+          },
+          "Q3_authorization_record": {
+            "correct": 792
+          },
+          "Q4_suspension_reason": {
+            "correct": 792
+          }
+        },
+        "selection_disagreements": 0
+      },
+      "action_only": {
+        "episodes": 792,
+        "question_slots": 3168,
+        "field_slots": 4752,
+        "questions": {
+          "correct": 434,
+          "incorrect_confident": 0,
+          "insufficient_evidence": 2734,
+          "reference_unavailable": 0
+        },
+        "fields": {
+          "correct": 868,
+          "incorrect_confident": 0,
+          "insufficient_evidence": 3884,
+          "reference_unavailable": 0
+        },
+        "by_question": {
+          "Q1_policy_version": {
+            "insufficient_evidence": 792
+          },
+          "Q2_observation_available": {
+            "insufficient_evidence": 792
+          },
+          "Q3_authorization_record": {
+            "insufficient_evidence": 358,
+            "correct": 434
+          },
+          "Q4_suspension_reason": {
+            "insufficient_evidence": 792
+          }
+        },
+        "selection_disagreements": 0
+      },
+      "no_evidence_age": {
+        "episodes": 792,
+        "question_slots": 3168,
+        "field_slots": 4752,
+        "questions": {
+          "correct": 2376,
+          "incorrect_confident": 0,
+          "insufficient_evidence": 792,
+          "reference_unavailable": 0
+        },
+        "fields": {
+          "correct": 3960,
+          "incorrect_confident": 0,
+          "insufficient_evidence": 792,
+          "reference_unavailable": 0
+        },
+        "by_question": {
+          "Q1_policy_version": {
+            "correct": 792
+          },
+          "Q2_observation_available": {
+            "insufficient_evidence": 792
+          },
+          "Q3_authorization_record": {
+            "correct": 792
+          },
+          "Q4_suspension_reason": {
+            "correct": 792
+          }
+        },
+        "selection_disagreements": 0
+      },
+      "explicit_age_fields_only": {
+        "episodes": 792,
+        "question_slots": 3168,
+        "field_slots": 4752,
+        "questions": {
+          "correct": 3168,
+          "incorrect_confident": 0,
+          "insufficient_evidence": 0,
+          "reference_unavailable": 0
+        },
+        "fields": {
+          "correct": 4752,
+          "incorrect_confident": 0,
+          "insufficient_evidence": 0,
+          "reference_unavailable": 0
+        },
+        "by_question": {
+          "Q1_policy_version": {
+            "correct": 792
+          },
+          "Q2_observation_available": {
+            "correct": 792
+          },
+          "Q3_authorization_record": {
+            "correct": 792
+          },
+          "Q4_suspension_reason": {
+            "correct": 792
+          }
+        },
+        "selection_disagreements": 0
+      },
+      "no_authorization_view": {
+        "episodes": 792,
+        "question_slots": 3168,
+        "field_slots": 4752,
+        "questions": {
+          "correct": 2810,
+          "incorrect_confident": 0,
+          "insufficient_evidence": 358,
+          "reference_unavailable": 0
+        },
+        "fields": {
+          "correct": 4036,
+          "incorrect_confident": 0,
+          "insufficient_evidence": 716,
+          "reference_unavailable": 0
+        },
+        "by_question": {
+          "Q1_policy_version": {
+            "correct": 792
+          },
+          "Q2_observation_available": {
+            "correct": 792
+          },
+          "Q3_authorization_record": {
+            "insufficient_evidence": 358,
+            "correct": 434
+          },
+          "Q4_suspension_reason": {
+            "correct": 792
+          }
+        },
+        "selection_disagreements": 0
+      }
+    }
+  },
+  "all_steps_delivery_checked": true,
+  "all_trajectory_signatures_preserved": true,
+  "delivered_state_steps_checked": 190080,
+  "absent_state_steps": 432,
+  "original_audit_receipt_sha256": "fa024be3b0effbfbde226036b7ea1252d57336e0a3f8f6803aa827e27291d0e2",
+  "combined_endpoint_sha256": "6f60d5f10a455091d603eafbd0d003beaf489303cbf7d1ecdfeb1adbd59ce786",
+  "scope": "Selected complete design records: all 757 original completed outcomes plus first completed technical follow-ups. Original bounded audit preserved separately.",
+  "question_category_transitions": {
+    "frozen_original_reference_diagnostic -> frozen_with_q2_reference_amendment / provenance_rich": {
+      "correct -> correct": 2983,
+      "incorrect_confident -> correct": 113,
+      "insufficient_evidence -> reference_unavailable": 72
+    },
+    "frozen_original_reference_diagnostic -> frozen_with_q2_reference_amendment / action_only": {
+      "correct -> correct": 828,
+      "incorrect_confident -> incorrect_confident": 263,
+      "insufficient_evidence -> insufficient_evidence": 2005,
+      "insufficient_evidence -> reference_unavailable": 72
+    },
+    "frozen_original_reference_diagnostic -> frozen_with_q2_reference_amendment / no_evidence_age": {
+      "correct -> correct": 2376,
+      "incorrect_confident -> insufficient_evidence": 8,
+      "insufficient_evidence -> insufficient_evidence": 712,
+      "insufficient_evidence -> reference_unavailable": 72
+    },
+    "frozen_original_reference_diagnostic -> frozen_with_q2_reference_amendment / explicit_age_fields_only": {
+      "correct -> correct": 2983,
+      "incorrect_confident -> correct": 113,
+      "insufficient_evidence -> reference_unavailable": 72
+    },
+    "frozen_original_reference_diagnostic -> frozen_with_q2_reference_amendment / no_authorization_view": {
+      "correct -> correct": 2625,
+      "incorrect_confident -> correct": 113,
+      "insufficient_evidence -> insufficient_evidence": 358,
+      "insufficient_evidence -> reference_unavailable": 72
+    },
+    "frozen_with_q2_reference_amendment -> command_only_selector_diagnostic / provenance_rich": {
+      "correct -> correct": 3096,
+      "reference_unavailable -> correct": 72
+    },
+    "frozen_with_q2_reference_amendment -> command_only_selector_diagnostic / action_only": {
+      "correct -> correct": 828,
+      "incorrect_confident -> incorrect_confident": 263,
+      "insufficient_evidence -> insufficient_evidence": 2005,
+      "reference_unavailable -> insufficient_evidence": 72
+    },
+    "frozen_with_q2_reference_amendment -> command_only_selector_diagnostic / no_evidence_age": {
+      "correct -> correct": 2376,
+      "insufficient_evidence -> insufficient_evidence": 720,
+      "reference_unavailable -> insufficient_evidence": 72
+    },
+    "frozen_with_q2_reference_amendment -> command_only_selector_diagnostic / explicit_age_fields_only": {
+      "correct -> correct": 3096,
+      "reference_unavailable -> correct": 72
+    },
+    "frozen_with_q2_reference_amendment -> command_only_selector_diagnostic / no_authorization_view": {
+      "correct -> correct": 2738,
+      "insufficient_evidence -> insufficient_evidence": 358,
+      "reference_unavailable -> correct": 72
+    },
+    "command_only_selector_diagnostic -> command_only_complete_monitor_history_v3 / provenance_rich": {
+      "correct -> correct": 3168
+    },
+    "command_only_selector_diagnostic -> command_only_complete_monitor_history_v3 / action_only": {
+      "correct -> correct": 434,
+      "correct -> insufficient_evidence": 394,
+      "incorrect_confident -> insufficient_evidence": 263,
+      "insufficient_evidence -> insufficient_evidence": 2077
+    },
+    "command_only_selector_diagnostic -> command_only_complete_monitor_history_v3 / no_evidence_age": {
+      "correct -> correct": 2376,
+      "insufficient_evidence -> insufficient_evidence": 792
+    },
+    "command_only_selector_diagnostic -> command_only_complete_monitor_history_v3 / explicit_age_fields_only": {
+      "correct -> correct": 3168
+    },
+    "command_only_selector_diagnostic -> command_only_complete_monitor_history_v3 / no_authorization_view": {
+      "correct -> correct": 2810,
+      "insufficient_evidence -> insufficient_evidence": 358
+    }
+  }
+}

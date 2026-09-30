@@ -2,7 +2,7 @@
 
 This repository contains research software, not a supported operational flight-control product. Its simulator connection can issue movement and reset commands. Keep simulator RPC private, use a single authorised control owner, and do not expose the unauthenticated RPC endpoint to the public internet.
 
-Use only environments and records you are authorised to access. Do not commit credentials, keys, private network details, raw operational transcripts or restricted simulator assets. Public examples should use synthetic values.
+Use only environments and records you are authorised to access. Do not commit credentials, keys, private network details, raw operational transcripts or restricted simulator assets. Software fixtures must be labelled synthetic. Authentic research examples may be published only with authorisation, a content review and explicit provenance; their presence does not authorise uploading unrelated raw records.
 
 ## Reporting a security concern
 

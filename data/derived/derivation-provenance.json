@@ -1,0 +1,72 @@
+{
+  "description": "Completed-design editorial derivative; 35 technical-gap slots completed with the frozen scientific source. Original bounded evidence is preserved unchanged.",
+  "endpoint-rows.json": {
+    "source_sha256": "6f60d5f10a455091d603eafbd0d003beaf489303cbf7d1ecdfeb1adbd59ce786",
+    "derived_sha256": "ab44c2160f53f7a0dec7941205a50ea9aa62d8f6a2b79964a4883fe6a255e61e",
+    "transformation": "Retain numerical endpoint labels and identity; omit raw records and infrastructure identifiers."
+  },
+  "original-endpoint-rows.json": {
+    "source_sha256": "d01e0d094f1355b8083244c678c1d28f5703b0b8fd31a516b274f2cf7c8d75bf",
+    "derived_sha256": "e4b4666b7b2779caf6752099fc2af19af62c1a57b54da1a86f83689e97cc421d",
+    "transformation": "Retain numerical endpoint labels and identity; omit raw records and infrastructure identifiers."
+  },
+  "scientific-summary.json": {
+    "source_sha256": "0b54c72397b05cbab79c733a8a6279939e54ca17cb3b32c38ac22bbbfddba845",
+    "derived_sha256": "460837ec7105a1b33be1633543cc50f22be169b75c19b5db2c3b411a59020eb4",
+    "transformation": "Omit infrastructure fields and scrub absolute paths/IPs; numerical scientific values unchanged."
+  },
+  "original-scientific-summary.json": {
+    "source_sha256": "6d9bd0eebe6f4fe1d3cfa04d26ededec6ec7f7f3ee4615e423cbf3e58acb3b09",
+    "derived_sha256": "040100211d8bec4c9d986ac361d757b8ec669219894aa3d07c0fb590cf0702d9",
+    "transformation": "Omit infrastructure fields and scrub absolute paths/IPs; numerical scientific values unchanged."
+  },
+  "reconstruction-summary.json": {
+    "source_sha256": "d80112bb45d1e65233a27d5a24c8bd04c440d7b76e4b43a483588ce2365550ae",
+    "derived_sha256": "d80112bb45d1e65233a27d5a24c8bd04c440d7b76e4b43a483588ce2365550ae",
+    "transformation": "Omit infrastructure fields and scrub absolute paths/IPs; numerical scientific values unchanged."
+  },
+  "failure-atlas.json": {
+    "source_sha256": "44d6dfaacbae3c8baabfc13a9ac4ae64c2eaaf6db9cebfb6b95898f7f8370de0",
+    "derived_sha256": "f50310dff783130fb6b5c6eebf496c77aa936ed39577119c5fa0a5365bd8070c",
+    "transformation": "Omit infrastructure fields and scrub absolute paths/IPs; numerical scientific values unchanged."
+  },
+  "recovery-horizon-comparison.json": {
+    "source_sha256": "8e9284345715e0b33ac8cce7306577ee2dd785ef5776efa3a6931998951830e9",
+    "derived_sha256": "8e9284345715e0b33ac8cce7306577ee2dd785ef5776efa3a6931998951830e9",
+    "transformation": "Omit infrastructure fields and scrub absolute paths/IPs; numerical scientific values unchanged."
+  },
+  "secondary-measurements.json": {
+    "source_sha256": "f2a4056eca1274dbb6144c8db8ef0b08d8bdaa428e8a6d59c8640a5f95f0f8e7",
+    "derived_sha256": "f2a4056eca1274dbb6144c8db8ef0b08d8bdaa428e8a6d59c8640a5f95f0f8e7",
+    "transformation": "Omit infrastructure fields and scrub absolute paths/IPs; numerical scientific values unchanged."
+  },
+  "guard-linkage.json": {
+    "source_sha256": "beb06e2f5a28934bca71c031f653cd470ebdaee8f8d8af30e4a0e51503eb58f2",
+    "derived_sha256": "beb06e2f5a28934bca71c031f653cd470ebdaee8f8d8af30e4a0e51503eb58f2",
+    "transformation": "Omit infrastructure fields and scrub absolute paths/IPs; numerical scientific values unchanged."
+  },
+  "completion-accounting.json": {
+    "source_sha256": "0e5605adcb8d1726842c1406c06d6ad781eebd76b983d0edf22ed4cc84e05d64",
+    "derived_sha256": "ee09026050cc9e44307f610572215c585f6b63be003da4ade82554a1452aa15b",
+    "transformation": "Omit infrastructure fields and scrub absolute paths/IPs; numerical scientific values unchanged."
+  },
+  "followup-endpoint-transitions.json": {
+    "source_sha256": "a0e4b4570122ac4e8271ad26c8edc8bf53be33a8a4706a1799d0e4a5d05b281c",
+    "derived_sha256": "a0e4b4570122ac4e8271ad26c8edc8bf53be33a8a4706a1799d0e4a5d05b281c",
+    "transformation": "Omit infrastructure fields and scrub absolute paths/IPs; numerical scientific values unchanged."
+  },
+  "original-separate-host-comparison.json": {
+    "source_sha256": "658f8b4f7be8c145e7bab0463f5eab52c7d2249043125b20787a9b4d553666a5",
+    "derived_sha256": "658f8b4f7be8c145e7bab0463f5eab52c7d2249043125b20787a9b4d553666a5",
+    "transformation": "Omit infrastructure fields and scrub absolute paths/IPs; numerical scientific values unchanged."
+  },
+  "completion-plan.json": {
+    "source_sha256": "a3e9652455e04848e7b14013b78ae02d0115740477a8fcb3d1e51d26ab217517",
+    "derived_sha256": "a3e9652455e04848e7b14013b78ae02d0115740477a8fcb3d1e51d26ab217517",
+    "transformation": "Omit infrastructure fields and scrub absolute paths/IPs; numerical scientific values unchanged."
+  },
+  "separate-host-followup-verification.json": {
+    "derived_sha256": "d258f9d55487a6d4bc0da2693c892b9c09a31e15d079f30d471302520dbc0882",
+    "transformation": "Verified receipt summaries; full receipts preserved in private archive."
+  }
+}
