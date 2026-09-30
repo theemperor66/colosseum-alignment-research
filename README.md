@@ -80,6 +80,7 @@ These checks run on a CPU without a simulator. Fixtures and the separately label
 | `src/colosseum_assurance/` | Frozen runtime, perception, guards, evaluation, reconstruction and analysis modules. |
 | `study/` | Fixed study specification, 15 protocol files, corrected scorer, study-specific analysis routines and file provenance. |
 | `scripts/` | Public verification entry points. |
+| `configs/` | Explicitly unqualified configuration examples for new environments. |
 | `tests/` | CPU software checks with synthetic fixtures. |
 | `proposed-code/` | Reporting-contract demonstrations developed after collection; excluded from claims about the executed flight policy. |
 | `docs/` | Research design, reproducibility and interpretation guidance. |

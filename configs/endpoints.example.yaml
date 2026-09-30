@@ -1,0 +1,33 @@
+# Example client configuration. Copy to configs/endpoints.local.yaml (gitignored) and edit.
+# No credentials belong in this file. Remote access goes through an SSH tunnel:
+#   ssh -N -L 41451:127.0.0.1:41451 <user>@<server>
+# The client refuses a non-loopback host unless allow_direct_remote is set on purpose, because the
+# Colosseum RPC API is unauthenticated.
+
+endpoint:
+  host: 127.0.0.1
+  port: 41451
+  label: mac-ssh-tunnel
+  connect_timeout_s: 10.0
+  rpc_timeout_s: 20.0
+  reset_timeout_s: 60.0
+  allow_direct_remote: false
+  vehicle_name: Drone1
+
+paths:
+  results_root: results
+
+# fixture and smoke may use the local test fixture. pilot and heldout may not, and they additionally
+# require protocol_path and simulator_attestation_path to exist.
+run_class: fixture
+require_live_simulator: false
+allow_fixture_fake: true
+
+# For an experimental run, uncomment and point these at real files:
+# run_class: pilot
+# require_live_simulator: true
+# allow_fixture_fake: false
+# protocol_path: configs/frozen/protocol-pilot-<hash>.json
+# simulator_attestation_path: configs/simulator-attestation.json
+
+log_level: INFO

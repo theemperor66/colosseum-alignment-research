@@ -1,0 +1,88 @@
+# Geometry contract: which actor is which mesh, and how big that mesh really is.
+#
+# WHY THIS FILE EXISTS
+# --------------------
+# No RPC in Colosseum at pin 84fc0c1c75bc73a0135ee80a325d470577c66c52 returns the world extents of an
+# actor. `simGetObjectScale` (RpcLibServerBase.cpp:392 -> WorldSimApi.cpp:376-387) returns
+# `AActor::GetActorScale()`, a UNITLESS multiplier. Metres therefore need a second, human source: the
+# base size of the source mesh. This file is that source, and it is evidence only because every entry
+# names who measured the mesh, how, and when.
+#
+# The scene gate refuses an actor whose extent rests on nothing
+# (`colosseum_assurance.sim.scene.assert_scene_ready`, strict by default). Point a run at your own
+# contract with:
+#
+#     export COLASSURE_SCENE_GEOMETRY_CONTRACT=configs/scene-geometry.<your-site>.yaml
+#
+# or pass `geometry_contract_path=` to `bind_scene` / `verify_scene`.
+#
+# status: example  ->  THIS FILE CANNOT AUTHORISE AN EXPERIMENT.
+# Loading it works, every number below is reported, and the gate still blocks with a
+# "[contract] ... is marked status: example" reason. Copy it, measure your own meshes, replace every
+# measurement field, and set `status: reviewed` with a real `reviewed_by`.
+status: example
+contract_version: "1.0.0"
+reviewed_by: ""
+reviewed_at: ""
+note: >-
+  Template only. These entries are illustrative, not qualification evidence for any running
+  simulator. Replace every entry with verified measurements before a scientific episode.
+
+entries:
+  # ---------------------------------------------------------------------------------------------
+  # 1. Study boxes we spawn ourselves (scene mode `instantiate`).
+  #    `pattern` matches the WHOLE actor name, like upstream `std::regex_match`
+  #    (AirBlueprintLib.cpp:441), so a prefix needs `.*` at the end.
+  # ---------------------------------------------------------------------------------------------
+  - pattern: "colassure-.*"
+    mesh_name: "Cube"
+    # /Engine/BasicShapes/Cube is a 1 m cube at scale 1. That is an Unreal Engine CONVENTION. It has
+    # not been established by this example, which is why this file says `status: example`.
+    # The convention is a starting point for qualification, not a measurement of your instance.
+    mesh_base_size_m: { x: 1.0, y: 1.0, z: 1.0 }
+    measured_by: "REPLACE-ME: name of the person who measured this mesh"
+    measurement_method: >-
+      REPLACE-ME. Example of an acceptable method: spawn the mesh at scale (1,1,1) in the packaged
+      build, read the actor bounds in the Unreal editor for the same cooked asset, and record both
+      numbers in the evidence file below.
+    measured_at: "2026-09-17"
+    evidence_uri: "REPLACE-ME: path or URL of the measurement record"
+    note: >-
+      Used by scene mode instantiate. `instantiate_scene` refuses to spawn when this entry and the
+      asset it is asked to spawn disagree, because this entry is what turns a scale multiplier into
+      metres.
+
+  # ---------------------------------------------------------------------------------------------
+  # 2. A third-party map actor (scene mode `qualified_map`), on a server that answers
+  #    simGetObjectScale. The live scale multiplied by the mesh base size gives the metre extent.
+  # ---------------------------------------------------------------------------------------------
+  - pattern: ".*ShippingContainer.*"
+    mesh_name: "SM_ShippingContainer_40ft"
+    mesh_base_size_m: { x: 12.19, y: 2.44, z: 2.59 }
+    measured_by: "REPLACE-ME"
+    measurement_method: >-
+      REPLACE-ME. Example: open the cooked asset in the Unreal editor, read the static-mesh bounds at
+      scale 1, and cross-check against the manufacturer drawing.
+    measured_at: "2026-09-17"
+    note: >-
+      The numbers above are a plausible-looking EXAMPLE, not a measurement made by this project.
+
+  # ---------------------------------------------------------------------------------------------
+  # 3. A body on a server that does NOT answer simGetObjectScale. Only an independently measured
+  #    world half-extent can stand in, and the entry must opt in explicitly. Without the opt-in the
+  #    actor stays `unverifiable` and blocks the episode.
+  # ---------------------------------------------------------------------------------------------
+  - pattern: "dapeng_rock_[0-9]+"
+    mesh_name: "REPLACE-ME: the mesh this actor is built from"
+    mesh_base_size_m: { x: 1.0, y: 1.0, z: 1.0 }
+    world_half_extent_m: { x: 1.4, y: 1.1, z: 0.9 }
+    accept_world_half_extent_without_live_scale: true
+    measured_by: "REPLACE-ME"
+    measurement_method: >-
+      REPLACE-ME. An independent measurement of the PLACED body, for example laser/tape measurement in
+      the editor viewport with the level loaded, or photogrammetry of the packaged level. Record the
+      date, the tool and the uncertainty.
+    measured_at: "2026-09-17"
+    note: >-
+      The live level then contributes the POSITION only. The report says so per actor
+      (extent_source: contract_declared_world_extent), and the run record keeps that sentence.

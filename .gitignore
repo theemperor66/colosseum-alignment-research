@@ -11,7 +11,10 @@ dist/
 *.local.yaml
 *.pem
 *.key
-configs/simulator-attestation.json
+configs/*.yaml
+!configs/*.example.yaml
+configs/*.json
+!configs/*.example.json
 src/colosseum_assurance/_build_provenance.json
 results/
 data/
